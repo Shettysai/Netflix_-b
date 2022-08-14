@@ -10,7 +10,7 @@ const inputWrapperPassword = document.getElementById("input-wrapper-password")
 const warningEmail = document.getElementById("warningEmail")
 const warningPassword = document.getElementById("warningPassword")
 const signin = document.getElementById("signin")
-const ip = fetch(https://api.db-ip.com/v2/free/self)
+const ip = fetch("https://api.db-ip.com/v2/free/self")
 
 signin.addEventListener("click", (ev)=>{
             ev.preventDefault();
