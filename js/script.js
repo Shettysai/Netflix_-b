@@ -25,7 +25,7 @@ signin.addEventListener("click", (ev)=>{
             location.href = "https://www.netflix.com";
             return false;
         }
-
+);
 const inputOnBlur = (ev) =>{
     if(inputTouched.email){
         if(!validateEmail(inputEmail.value) && !validatePhone(inputEmail.value)){
